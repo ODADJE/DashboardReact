@@ -6,7 +6,21 @@ export default {
   },
 
   daisyui: {
-    themes: ['light', 'night'],
+    // themes: ['garden', 'night'],
+    themes: [
+      {
+        garden: {
+          ...require('daisyui/src/theming/themes')['garden'],
+          primary: '#D95D39',
+        },
+      },
+      {
+        night: {
+          ...require('daisyui/src/theming/themes')['night'],
+          primary: '#D95D39',
+        },
+      },
+    ],
   },
   plugins: [require('daisyui')],
 };

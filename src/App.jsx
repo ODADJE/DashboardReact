@@ -1,13 +1,8 @@
 import React from 'react';
+import Dashbord from './pages/Dashboard/Dashbord';
 
 function App() {
-  return (
-    <div>
-      <h1 className="text-3xl font-bold underline text-red-500">
-        Hello world!
-      </h1>
-    </div>
-  );
+  return <Dashbord />;
 }
 
 export default App;
