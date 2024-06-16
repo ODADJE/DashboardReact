@@ -2,20 +2,24 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Manrope', 'sans-serif'],
+      },
+    },
   },
 
   daisyui: {
     // themes: ['garden', 'night'],
     themes: [
       {
-        garden: {
-          ...require('daisyui/src/theming/themes')['garden'],
+        light: {
+          ...require('daisyui/src/theming/themes')['lemonade'],
           primary: '#D95D39',
         },
       },
       {
-        night: {
+        dark: {
           ...require('daisyui/src/theming/themes')['night'],
           primary: '#D95D39',
         },

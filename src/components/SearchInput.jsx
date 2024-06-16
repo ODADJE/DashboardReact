@@ -2,7 +2,7 @@ import React from 'react';
 
 function SearchInput() {
   return (
-    <label className="input input-bordered flex items-center gap-2 rounded-full ">
+    <label className="hidden input input-bordered input-sm md:flex items-center gap-2 rounded-full ">
       <input type="text" className="grow" placeholder="Search" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
