@@ -14,7 +14,7 @@ export default {
     themes: [
       {
         light: {
-          ...require('daisyui/src/theming/themes')['lemonade'],
+          ...require('daisyui/src/theming/themes')['autumn'],
           primary: '#D95D39',
         },
       },
