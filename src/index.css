@@ -14,5 +14,5 @@
 }
 
 body * {
-  @apply transition-colors duration-75 ease-in-out;
+  @apply transition-colors duration-150 ease-in-out;
 }

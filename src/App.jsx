@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Login from './pages/Auth/Login/Login';
 import Error from './pages/Error/Error';
+import User from './pages/User/User';
 
 function App() {
   const router = createBrowserRouter([
@@ -16,9 +17,13 @@ function App() {
       path: '/dashboard',
       element: <Dashboard />,
       children: [
+        // {
+        //   index: true,
+        //   element: <Home />,
+        // },
         {
-          index: true,
-          element: <Home />,
+          path: 'user',
+          element: <User />,
         },
       ],
     },

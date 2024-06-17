@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 function Error() {
   return (
     <div className="w-screen h-screen flex items-center justify-center flex-col gap-3">
-      <Logo />
+      <Link to="/dashboard">
+        <Logo />
+      </Link>
       <h1 className="text-2xl">
         <span className="text-error">Error:</span>Page not found
       </h1>

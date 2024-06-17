@@ -1,25 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function ThemeSwitcher() {
+  const [theme, setTheme] = useState('');
   useEffect(() => {
-    /* Sets the data-theme attribute on html tag */
     document.documentElement.setAttribute(
       'data-theme',
       localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'
     );
+    setTheme(localStorage.getItem('theme') === 'dark' ? 'dark' : 'light');
   }, []);
   return (
     <label className="swap swap-rotate text-sm">
-      {/* this hidden checkbox controls the state */}
       <input
         type="checkbox"
         className="theme-controller"
         value="synthwave"
-        // checked={localStorage.getItem('theme') === 'dark'}
+        checked={theme === 'light'}
         onClick={(e) => {
           let newTheme = e.target.checked ? 'light' : 'dark';
           localStorage.setItem('theme', newTheme);
           document.documentElement.setAttribute('data-theme', newTheme);
+          setTheme(newTheme);
         }}
       />
 

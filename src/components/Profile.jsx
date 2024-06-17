@@ -1,6 +1,19 @@
 import React from 'react';
-import { profileMenu } from '../utils/menu';
+import { FaRightFromBracket, FaUserPen } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
+
+export const profileMenu = [
+  {
+    label: 'Profile',
+    link: '/profile',
+    icon: <FaUserPen />,
+  },
+  {
+    label: 'Logout',
+    link: '/logout',
+    icon: <FaRightFromBracket />,
+  },
+];
 
 function Profile() {
   return (
@@ -22,7 +35,10 @@ function Profile() {
         >
           {profileMenu.map((item) => (
             <li key={item.label}>
-              <NavLink to={item.link}>{item.label}</NavLink>
+              <NavLink end to={item.link}>
+                {item.icon}
+                {item.label}
+              </NavLink>
             </li>
           ))}
         </ul>
