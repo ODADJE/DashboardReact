@@ -8,8 +8,8 @@ function Error() {
       <Link to="/dashboard">
         <Logo />
       </Link>
-      <h1 className="text-2xl">
-        <span className="text-error">Error:</span>Page not found
+      <h1 className="text-2xl font-bold">
+        <span className="text-error ">Error:</span>Page not found
       </h1>
       <Link to="/dashboard" className="btn btn-primary font-bold">
         Go to Dashboard

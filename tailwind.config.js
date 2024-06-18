@@ -16,12 +16,14 @@ export default {
         light: {
           ...require('daisyui/src/theming/themes')['autumn'],
           primary: '#D95D39',
+          error: '#960200',
         },
       },
       {
         dark: {
           ...require('daisyui/src/theming/themes')['night'],
           primary: '#D95D39',
+          error: '#960200',
         },
       },
     ],

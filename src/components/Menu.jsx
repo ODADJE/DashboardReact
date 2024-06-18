@@ -1,6 +1,14 @@
 import React from 'react';
-import { FaProductHunt, FaTachometerAlt, FaWarehouse } from 'react-icons/fa';
-import { FaCartShopping, FaFile, FaGear, FaUserLarge } from 'react-icons/fa6';
+import { FaTachometerAlt } from 'react-icons/fa';
+import {
+  FaCartShopping,
+  FaChartLine,
+  FaGear,
+  FaHouseChimney,
+  FaUserLarge,
+  FaUsers,
+  FaUsersLine,
+} from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 
 export const menuItems = [
@@ -13,28 +21,28 @@ export const menuItems = [
         icon: <FaTachometerAlt />,
       },
       {
-        label: 'Inventory',
-        link: 'inventory',
-        icon: <FaWarehouse />,
+        label: 'Properties',
+        link: 'properties',
+        icon: <FaHouseChimney />,
       },
       {
-        label: 'Production',
-        link: 'production',
-        icon: <FaProductHunt />,
+        label: 'Clients',
+        link: 'clients',
+        icon: <FaUsers />,
       },
       {
-        label: 'Orders',
-        link: 'orders',
-        icon: <FaCartShopping />,
+        label: 'Owners',
+        link: 'owners',
+        icon: <FaUsersLine />,
       },
       {
         label: 'Reports',
         link: 'reports',
-        icon: <FaFile />,
+        icon: <FaChartLine />,
       },
       {
-        label: 'User',
-        link: 'user',
+        label: 'Users',
+        link: 'users',
         icon: <FaUserLarge />,
       },
       {
