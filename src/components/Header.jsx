@@ -7,7 +7,7 @@ import HamburgerButton from './HamburgerButton';
 
 function Header() {
   return (
-    <div className="col-span-12 row-span-1 flex gap-3 flex-wrap items-center px-5 justify-between ">
+    <div className="col-span-12 row-span-1 min-h-[5rem]  flex gap-3 flex-wrap items-center px-5 justify-between ">
       <HamburgerButton />
       <Logo />
       {/* <Tab items={['Market', 'Wallet', 'Tools']} /> */}

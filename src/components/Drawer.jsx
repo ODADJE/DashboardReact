@@ -1,7 +1,4 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import Menu from './Menu';
-import GreetUser from './GreetUser';
 
 function Drawer({ children }) {
   return (
