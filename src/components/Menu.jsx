@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaTachometerAlt } from 'react-icons/fa';
 import {
-  FaCartShopping,
   FaChartLine,
   FaGear,
   FaHouseChimney,

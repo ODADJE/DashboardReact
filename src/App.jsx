@@ -1,10 +1,12 @@
 import React from 'react';
-import Dashboard from './pages/Dashboard/Dashboard';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './pages/Home/Home';
+import ThemeProvider from './contexts/ThemeProvider';
 import Login from './pages/Auth/Login/Login';
+import Dashboard from './pages/Dashboard/Dashboard';
 import Error from './pages/Error/Error';
 import User from './pages/User/User';
+import FeedbackProvider from './contexts/FeedbackContext';
+import { Toaster } from 'sonner';
 
 function App() {
   const router = createBrowserRouter([
@@ -17,10 +19,6 @@ function App() {
       path: '/dashboard',
       element: <Dashboard />,
       children: [
-        // {
-        //   index: true,
-        //   element: <Home />,
-        // },
         {
           path: 'users',
           element: <User />,
@@ -28,7 +26,14 @@ function App() {
       ],
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <ThemeProvider>
+      <FeedbackProvider>
+        <Toaster position="bottom-right" richColors />
+        <RouterProvider router={router} />
+      </FeedbackProvider>
+    </ThemeProvider>
+  );
 }
 
 export default App;

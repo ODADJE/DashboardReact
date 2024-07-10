@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import LoginForm from '../../../components/LoginForm';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  return <div>Login</div>;
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      navigate('/dashboard');
+    }
+  }, [navigate]);
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <LoginForm />
+    </div>
+  );
 }
 
 export default Login;

@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useTheme } from '../contexts/ThemeProvider';
 
 function ThemeSwitcher() {
-  const [theme, setTheme] = useState('');
-  useEffect(() => {
-    document.documentElement.setAttribute(
-      'data-theme',
-      localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'
-    );
-    setTheme(localStorage.getItem('theme') === 'dark' ? 'dark' : 'light');
-  }, []);
+  const { theme, setTheme } = useTheme();
+
   return (
     <label className="swap swap-rotate text-sm">
       <input
